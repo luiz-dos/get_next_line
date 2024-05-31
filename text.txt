@@ -1,0 +1,32 @@
+--- get next line ---
+checar se e um arquivo que da pra abrir
+se nao atingiu o maxopen
+se fd < 0
+se BUFFER_SIZE <= 0
+ler o arquivo, criar linha, colocar o restante na variavel estatica para a proxima chamada
+enquanto nao tiver a linha criada continuar lendo (colocar um sinalizador)
+
+
+--- funcao para criar a nova linha ---
+alocar espaco para a nova linha 
+passa o que ja tiver na linha para a nova linha
+passar o que foi lido para a nova linha (ate \n)
+validar a linha com \0
+dar free na linha anterior para evitar vazamento de memoria
+pois agora foi alocado espaco para linha novamente
+
+
+--- funcao para lidar com o que ficara na estatica ---
+se tiver algo antes de \n setar como zero (pois ja passei aquilo para a nova linha)
+se encontrar \n significa que a nova linha ja foi criada (entao setar o sinalizador como 1)
+organizar a estatica para a proxima chamada
+
+
+--- strlen_gnl ---
+contar o tamanho da str ate \n
+
+
+test.txt
+luiz henrique\n 
+maciel\n
+santos
