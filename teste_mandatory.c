@@ -6,16 +6,14 @@ int main(void)
     int     fd;
     char    *result;
 
-    fd = open("teste.txt", O_RDWR);
+    fd = open("t1.txt", O_RDWR);
     while (1)
     {
         result = get_next_line(fd);
-        printf("%s", result);
-        if (!result)
-        {
-            printf("\n");
+        if (result)
+            printf("%s", result);
+        else if (!result)
             break ;
-        }
         free (result);
     }
     return (0);
