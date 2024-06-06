@@ -1,20 +1,23 @@
 #include "get_next_line.h"
-#include <fcntl.h>
 
 int main(void)
 {
     int     fd;
     char    *result;
 
-    fd = open("t1.txt", O_RDWR);
+    fd = open("empty_text.txt", O_RDWR);
     while (1)
     {
         result = get_next_line(fd);
         if (result)
             printf("%s", result);
-        else if (!result)
+        if (!result)
+        {
+            printf("NULL\n");
             break ;
+        }
         free (result);
     }
+    close (fd);
     return (0);
 }
