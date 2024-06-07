@@ -6,7 +6,7 @@
 /*   By: luiz-dos <luiz-dos@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 11:16:19 by luiz-dos          #+#    #+#             */
-/*   Updated: 2024/06/07 12:44:23 by luiz-dos         ###   ########.fr       */
+/*   Updated: 2024/06/07 16:14:40 by luiz-dos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char	*get_next_line(int fd);
 char	*ft_line(char *line, char *buffer);
 int		ft_strlen_gnl(char *s);
 void	ft_handle_buffer(char *buffer, int *found_newline);
+void	get_next_line_two(char *buffer, int fd);
 
 #endif /* GET_NEXT_LINE_BONUS_H */
