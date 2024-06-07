@@ -11,6 +11,7 @@ int main(void)
         result = get_next_line(fd);
         if (result)
             printf("%s", result);
+            
         if (!result)
         {
             printf("NULL\n");
