@@ -26,6 +26,5 @@ char	*get_next_line(int fd);
 char	*ft_line(char *line, char *buffer);
 int		ft_strlen_gnl(char *s);
 void	ft_handle_buffer(char *buffer, int *found_newline);
-void	get_next_line_two(char *buffer, int fd);
 
 #endif /* GET_NEXT_LINE_BONUS_H */
